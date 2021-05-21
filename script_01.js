@@ -8,6 +8,20 @@
 4. Ausgabe in Konsole :: check!
 */
 
+// Modul: Dateneingabe + -überprüfung
+ausgabe(rechner(getOp(),1,2));
+
+// Modul: Operand eingabe | Test
+//ausgabe(getOp());
+function getOp() {
+    let op = prompt("Bitte +|-|*|/ eingeben")
+    return op ;
+}
+
+
+
+
+
 // Modul: Rechenart auswählen | Test
 // ausgabe(rechner("+",1,2));
 // ausgabe(rechner("-",1,2));
