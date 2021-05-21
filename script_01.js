@@ -8,6 +8,38 @@
 4. Ausgabe in Konsole :: check!
 */
 
+// Modul: Rechenart auswählen | Test
+ausgabe(rechner("+",1,2));
+ausgabe(rechner("-",1,2));
+ausgabe(rechner("*",1,2));
+ausgabe(rechner("/",1,2));
+ausgabe(rechner("/",1,0));
+ausgabe(rechner("#?!",1,2));
+
+function rechner(op,a,b) {
+    switch (op) {
+        case "+":
+        return addieren(a,b);
+
+        case "-":
+        return subtrahieren(a,b);
+
+        case "*":
+        return multiplizieren(a,b);
+
+        case "/":
+        return dividieren(a,b);
+    default:
+        return "Irgendwas ging schief"
+    }
+
+
+    return addieren(a,b);
+    //return subtrahieren(a,b); 
+    //return multiplizieren(a,b);
+    //return dividieren(a,b);
+}
+
 
 // Modul: Division a / b | Test
 /******** Beispiel 1 *******/
