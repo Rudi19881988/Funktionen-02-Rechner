@@ -8,19 +8,57 @@
 4. Ausgabe in Konsole :: check!
 */
 
-// Modul: Dateneingabe + -überprüfung
-ausgabe(rechner(getOp(),1,2));
+//ausgabe(rechner(getOp(),getZahl1(),2));
 
-// Modul: Operand eingabe | Test
-//ausgabe(getOp());
-function getOp() {
-    let op = prompt("Bitte +|-|*|/ eingeben")
-    return op ;
+// Modul: Zahl eingeben | Test:
+ausgabe(getZahl("1"));
+ausgabe(getZahl("2"));
+function getZahl(numStr) {
+    let zahl = parseInt(prompt("Bitte Zahl " + numStr + "eingeben."))
+    while (isNaN(zahl)) {
+        zahl = parseInt(prompt("Das ist keine Zahl. Bitte nochmal."));
+    }
+        return zahl; 
 }
 
 
 
+// Modul: Operand eingabe | Test
+//ausgabe(getOp());
+function getOp() {
+    let op = prompt("Bitte +|-|*|/ eingeben.")
+    
+    while (!isOpValid(op)) { // solange falsche eingabe ---> schleife
+        op = prompt("Bitte einen korrekten Operator eingeben")
+    }
+    
+    return op ;
+        
+}
 
+// Modul: Operand überprüfen | Test
+// ausgabe(isOpValid("+"));
+// ausgabe(isOpValid("-"));
+// ausgabe(isOpValid("*"));
+// ausgabe(isOpValid("/"));
+// ausgabe(isOpValid("#"));
+// ausgabe(isOpValid(""));
+// ausgabe(isOpValid());
+function isOpValid(op) {
+/*
+    switch (op) {
+        case "+":
+        case "-":
+        case "*":
+        case "/":
+            return true;
+    default:
+      return false;  
+    }
+    */
+
+    return op == "+" || op == "-" || op == "*" || op == "/";
+}
 
 // Modul: Rechenart auswählen | Test
 // ausgabe(rechner("+",1,2));
