@@ -15,7 +15,6 @@
 // ausgabe(rechner("/",1,2));
 // ausgabe(rechner("/",1,0));
 // ausgabe(rechner("#?!",1,2));
-
 function rechner(op,a,b) {
     switch (op) {
         case "+":
